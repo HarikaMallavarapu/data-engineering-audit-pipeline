@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+# Local virtual environments can contain installed executables over GitHub's web upload limit.
+.venv*/
+venv*/
+backend/.venv/
+backend/.venv-local/
+**/.pytest_cache/
+**/.ruff_cache/
+*.egg-info/
+*.tsbuildinfo
+**/coverage/
+.coverage*
+build/
+dist/
+
+# Frontend
+node_modules/
+frontend/dist/
+frontend/.vite/
+.nyc_output/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+!backend/.env.example
+
+# Local databases and runtime output
+*.db
+*.sqlite
+*.sqlite3
+backend/storage/
+
+# Generated and runtime datasets
+/datasets/generated/*
+!/datasets/generated/.gitkeep
+/datasets/output/*
+!/datasets/output/.gitkeep
+/datasets/quarantine/*
+!/datasets/quarantine/.gitkeep
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.idea/

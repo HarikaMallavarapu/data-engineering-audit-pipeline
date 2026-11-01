@@ -1,0 +1,58 @@
+{
+  "contract": "docs/autonomous_progress.md; DataTrace dashboard and source registry UI review using persisted API responses.",
+  "targetViewports": [
+    "1920x1080",
+    "1440x900",
+    "1366x768",
+    "1024x768",
+    "768x1024",
+    "390x844"
+  ],
+  "accessibility": {
+    "status": "pass",
+    "evidence": "After the modern palette refresh, Chrome Lighthouse snapshot audits reported Accessibility 100 and Best Practices 100 for the dashboard and source registry in desktop and mobile modes, in both light and dark themes. Browser keyboard review confirmed route changes focus the page h1 and Escape closes the mobile menu and restores focus to its toggle. Visible chart values, skip navigation, labels, and reduced-motion rules are present."
+  },
+  "responsive": {
+    "status": "pass",
+    "evidence": "Chrome viewport emulation rendered the dashboard at all six target sizes and the source registry at 1440x900 and 390x844. For each target, document scrollWidth equaled clientWidth. All twelve routes were also checked at 1440x900 and 390x844 with no document-level horizontal overflow; the source table retained an internal horizontal scroller."
+  },
+  "contentStates": {
+    "loading": {
+      "status": "pass",
+      "evidence": "Vitest verified dashboard loading panels remain visible while run, source, and pipeline API promises are pending."
+    },
+    "empty": {
+      "status": "pass",
+      "evidence": "Vitest returned an empty pipeline registry and verified the source page explains that setup is backend-managed, links to the pipeline registry, and disables run actions."
+    },
+    "error": {
+      "status": "pass",
+      "evidence": "Vitest rejected the source-list API request and verified the specific error and retry action are shown."
+    },
+    "partial": {
+      "status": "pass",
+      "evidence": "The browser loaded run run_e6c920066b9db83a421cb11bbb3718eb from the local API and showed PARTIAL status, persisted stage outcomes, rejected and duplicate rows, balanced reconciliation, and audit events."
+    },
+    "success": {
+      "status": "pass",
+      "evidence": "Vitest verified CSV selection, upload success feedback, and the next supported run action after the upload mutation resolves."
+    },
+    "permission": {
+      "status": "not-applicable",
+      "reason": "The local DataTrace API has no account, role, or permission model to exercise in this UI slice."
+    }
+  },
+  "renderedEvidence": [
+    { "viewport": "1920x1080", "artifact": "dashboard-1920x1080.png", "observation": "Wide dashboard: eight API-derived metric cards, layered run-disposition chart, status distribution, latest execution." },
+    { "viewport": "1440x900", "artifact": "dashboard-1440x900.png", "observation": "Standard desktop dashboard with chart and status panels side by side." },
+    { "viewport": "1366x768", "artifact": "dashboard-1366x768.png", "observation": "Compact desktop dashboard with balanced two-column analytics." },
+    { "viewport": "1024x768", "artifact": "dashboard-1024x768.png", "observation": "Medium layout stacks dashboard analytics to preserve panel width." },
+    { "viewport": "768x1024", "artifact": "dashboard-768x1024.png", "observation": "Tablet layout uses grouped mobile navigation and a single analytics column." },
+    { "viewport": "390x844", "artifact": "dashboard-390x844.png", "observation": "Phone dashboard with two-column metrics and no page-level horizontal scroll." },
+    { "viewport": "1440x900", "artifact": "sources-1440x900.png", "observation": "Desktop CSV registry and upload form with API-backed source rows." },
+    { "viewport": "1440x900", "artifact": "dashboard-dark-1440x900.png", "observation": "Dark theme with ink-blue surfaces, indigo actions, and semantic status colors." },
+    { "viewport": "390x844", "artifact": "sources-390x844.png", "observation": "Phone source registry; wide table scrolls within its labeled region." },
+    { "viewport": "1440x900", "artifact": "run-detail-real-data.png", "observation": "Full-page persisted run investigation with counts, stage timeline, quarantine, duplicates, reconciliation, and audit evidence." },
+    { "viewport": "1440x900", "artifact": "source-schema-inspected-real-data.png", "observation": "Full-page source registry with the selected CSV's server-detected columns, file identity, and checksum." }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "color": {
+    "canvas": { "light": "#f4f6fb", "dark": "#0b1020" },
+    "surface": { "light": "#ffffff", "dark": "#121c31" },
+    "surfaceSoft": { "light": "#f8faff", "dark": "#18253c" },
+    "surfaceStrong": { "light": "#ffffff", "dark": "#202e47" },
+    "text": { "light": "#182235", "dark": "#f1f5fb" },
+    "textSecondary": { "light": "#526176", "dark": "#cbd5e1" },
+    "textMuted": { "light": "#5f6f86", "dark": "#aab7ca" },
+    "textSubtle": { "light": "#5f6f86", "dark": "#9ba9bd" },
+    "border": { "light": "#e1e7f0", "dark": "#28364d" },
+    "borderStrong": { "light": "#cbd5e1", "dark": "#3b4c67" },
+    "navigation": { "light": "#111827", "dark": "#080d1a" },
+    "navigationActive": { "light": "#c4b5fd", "dark": "#c4b5fd" },
+    "accent": { "light": "#4f46e5", "dark": "#4f46e5" },
+    "accentText": { "light": "#4338ca", "dark": "#a5b4fc" },
+    "accentHover": { "light": "#3730a3", "dark": "#4338ca" },
+    "accentSoft": { "light": "#eef2ff", "dark": "#24284b" },
+    "indigo": { "light": "#4f46e5", "dark": "#a5b4fc" },
+    "indigoSoft": { "light": "#eef2ff", "dark": "#262b4b" },
+    "success": { "light": "#0f7a54", "dark": "#68d9a8" },
+    "warning": { "light": "#9a6700", "dark": "#f5c66f" },
+    "danger": { "light": "#bd3546", "dark": "#ff9da6" },
+    "blue": { "light": "#2563eb", "dark": "#7aa7ff" },
+    "violet": { "light": "#7c3aed", "dark": "#c4a7ff" },
+    "chart": {
+      "accepted": { "light": "#0c8a6f", "dark": "#49d6af" },
+      "rejected": { "light": "#c74f42", "dark": "#ff927f" },
+      "duplicate": { "light": "#a86b00", "dark": "#ffcb6b" }
+    }
+  },
+  "space": { "1": "4px", "2": "8px", "3": "12px", "4": "16px", "5": "20px", "6": "24px", "8": "32px", "10": "40px" },
+  "radius": { "small": "7px", "medium": "10px", "large": "14px" },
+  "font": {
+    "sans": ["Inter", "Segoe UI Variable", "Segoe UI", "sans-serif"],
+    "mono": ["Cascadia Mono", "Consolas", "monospace"],
+    "bodySize": "14px",
+    "bodyLineHeight": 1.5
+  },
+  "layout": {
+    "sidebarWidth": "252px",
+    "collapsedSidebarWidth": "74px",
+    "contentMaxWidth": "1600px",
+    "mobileNavigationBreakpoint": "980px",
+    "smallScreenBreakpoint": "620px"
+  },
+  "interaction": {
+    "focusOutline": { "light": "3px solid #4f46e5", "dark": "3px solid #a5b4fc" },
+    "focusOffset": "3px",
+    "reducedMotion": "honor prefers-reduced-motion"
+  }
+}
